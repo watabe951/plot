@@ -1,6 +1,6 @@
 [project]
 name = "plot"
-version = ""
+version = "0.1.0"
 description = ""
 authors = [
     {name = "Yuuya Watabe", email = "watabe951@gmail.com"},
