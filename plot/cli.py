@@ -17,14 +17,11 @@ def main():
         xmin, xmax = tuple(args.xlim.split(":"))
         
     df = pd.read_csv(args.path)
-    print(df)
     y = df[args.y]
     if args.x:
         x = df[args.x]
     else:
         x = None
-    print(x)
-    print(y)
 
     ##ig = plt.figure()
     fig = plt.figure(figsize=(8, 6))
@@ -32,11 +29,9 @@ def main():
     #axes.set_xlim(0,30)
     if args.xlim:
         xmin, xmax = tuple(map(int, args.xlim.split(":")))
-        print(xmin, xmax)
         axes.set_xlim([xmin, xmax])
     if args.ylim:
         ymin, ymax = tuple(map(int, args.ylim.split(":")))
-        print(ymin, ymax)
         axes.set_ylim([ymin, ymax])
     if x is not None:
         plt.plot(x.to_numpy(),y.to_numpy())
